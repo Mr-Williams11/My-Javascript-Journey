@@ -91,11 +91,62 @@ console.log("Undefined Variable:", undefinedVar);
 // ***********C. Task 3. functions and contional statements************
 // N.B. READ WITH UNDERSTANDING!!!
 //  1.  Create 3 functions to convert R1000 into dollars, euros and pounds. Take function naming into consideration!
+// Converts R1000 to Dollars
+const amountInRand = 1000;
+const exchangeRates = {
+  USD: 18.48,
+  EUR: 19.73,
+  GBP: 22.66,
+};
+const amountInUSD = amountInRand / exchangeRates.USD;
+const amountInEUR = amountInRand / exchangeRates.EUR;
+const amountInGBP = amountInRand / exchangeRates.GBP;
+console.log(`R1000 is equal to R${amountInUSD} `);
+console.log(`R1000 is equal to R${amountInEUR} `);
+console.log(`R1000 is equal to R${amountInGBP} `);
+
 //  2.  Create a function that takes a value and calculates the amount entered including VAT (15%), amount entered should be R400.
 //      Then display the message in the console, "The amount after tax is ...".
+function calculateVat(value) {
+    const vat = value * 0.15;
+    const amountAfterTax = value + vat;
+
+    console.log("The amount after tax is R" + amountAfterTax);
+}
+
+calculateVat(400);
+
 //  3.  Declare 3 variables 1stNum, 2ndNum, 3rdNum and assign values of 8, 20 and 14 respectfully. Now write a function that compares “num1” and “num2” and 
 //      displays the larger value.
+
+const Num1 = 8;
+const Num2 = 20;
+const Num3 = 14;
+function findLargestNumber() {
+  if (Num1 >= Num2 && Num1 >= Num3) {
+    console.log("Num1 is the largest:", Num1);
+  } else if (Num2 >= Num1 && Num2 >= Num3) {
+    console.log("Num2 is the largest:", Num2);
+  } else {
+    console.log("Num3 is the largest:", Num3);
+  }
+}
+
+findLargestNumber()
 //  4.  Write a function that determines whether “num1” is odd or even and displays the
 //      result. (Tip: remember the modulus operator %)
+function determineOddOrEven(num) {
+    if (num % 2 === 0) {
+       console.log(`${num} is even.`);
+    } else {
+       console.log(`${num} is odd.`);
+    }
+   }
+    const num = 8;
+   determineOddOrEven(num);
 //  5.  Next, write a JavaScript conditional statement to sort the three numbers(1stNum, 2ndNum, 3rdNum) from largest to smallest.
+const numbers = [Num1, Num2, Num3];
 
+numbers.sort((a, b) => b - a);
+
+console.log(numbers);
