@@ -45,10 +45,48 @@ console.log(x) + 'remainder' + (y);
 
 // B. Task 2:Data Types
 // 1. Define the following data types with your own contents[ 'integer', 'decimal', 'string', 'array'(minimum: 3 items), 'Object'(minimum: 4 values)]
+    // integer
+var myInteger = 12;
+
+// decimal
+var myDecimal = 3.14;
+
+// string
+var myString = "Hello, world!";
+
+// array
+var myArray = [1, 2, 3];
+
+// Object
+var myObject = {
+ name: "John Doe",
+ age: 30,
+ city: "New York",
+ job: "Software Engineer"
+};
 // 2. Once you’ve created the variables, display them to the console
+console.log(myInteger);
+console.log(myDecimal);
+console.log(myString);
+console.log(myArray);
+console.log(myObject);
 // 3. Use the ‘typeof’ function to check each variable
+console.log(typeof myInteger); 
+console.log(typeof myDecimal); 
+console.log(typeof myString); 
+console.log(typeof myArray); 
+console.log(typeof myObject); 
+
 // 4. Create an array with numbers and strings. Comment what data type you expect this tobe. Then use the ‘typeof’ function on this array
+let arr = [1, 2, 3, "Hello"];
+console.log(typeof arr);
 // 5. Create a null variable and an undefined variable
+let nullVar = null;
+console.log("Null Variable:", nullVar);
+
+let undefinedVar;
+console.log("Undefined Variable:", undefinedVar);
+
 
 // ***********C. Task 3. functions and contional statements************
 // N.B. READ WITH UNDERSTANDING!!!
